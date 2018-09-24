@@ -17,7 +17,8 @@ public class Crypto {
         System.out.println("OMG, Someone is decrypting ur mesage!");
         System.out.println(decrypted);
         System.out.println("Would you like to annihilate the decrypted message?");
-        if(input.hasNext("y"))
+        String answer = input.next();
+        if(answer.startsWith("Y")||answer.startsWith("y"))
             for(int i=0;i<26; i++){
                 bruteForce(encrypted);
             }
